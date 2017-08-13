@@ -30,7 +30,12 @@ test:
 about:
     home: http://ipython.org
     license: BSD 3-clause
-    summary: Interactive Widgets for Jupyter
+    license_family: BSD
+    summary: IPython HTML widgets for Jupyter
+    description: |
+      Interactive HTML widgets for Jupyter notebooks.
+    doc_url: https://pypi.python.org/pypi/widgetsnbextension
+    dev_url: https://github.com/jupyter-widgets/ipywidgets/tree/master/widgetsnbextension
 
 extra:
   recipe-maintainers:
