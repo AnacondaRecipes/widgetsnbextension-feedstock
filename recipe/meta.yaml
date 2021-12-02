@@ -34,7 +34,7 @@ about:
   description: |
     Interactive HTML widgets for Jupyter notebooks.
   doc_url: https://pypi.python.org/pypi/widgetsnbextension
-  dev_url: https://github.com/jupyter-widgets/ipywidgets/tree/master/widgetsnbextension
+  dev_url: https://github.com/jupyter-widgets/ipywidgets/tree/master/python/widgetsnbextension
 
 extra:
   recipe-maintainers:
