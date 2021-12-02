@@ -1,4 +1,4 @@
-{% set version = "3.5.1" %}
+{% set version = "3.5.2" %}
 
 package:
   name: widgetsnbextension
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/w/widgetsnbextension/widgetsnbextension-{{ version }}.tar.gz
-  sha256: 079f87d87270bce047512400efd70238820751a11d2d8cb137a5a5bdbaf255c7
+  sha256: e0731a60ba540cd19bbbefe771a9076dcd2dde90713a8f87f27f53f2d1db7727
 
 build:
   number: 0
@@ -17,6 +17,8 @@ requirements:
     - python
     - pip
     - notebook >=4.4.1
+    - wheel
+    - setuptools
   run:
     - python
     - notebook >=4.4.1
@@ -24,6 +26,10 @@ requirements:
 test:
   imports:
     - widgetsnbextension
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: http://ipython.org
@@ -34,7 +40,7 @@ about:
   description: |
     Interactive HTML widgets for Jupyter notebooks.
   doc_url: https://pypi.python.org/pypi/widgetsnbextension
-  dev_url: https://github.com/jupyter-widgets/ipywidgets/tree/master/widgetsnbextension
+  dev_url: https://github.com/jupyter-widgets/ipywidgets/tree/master/python/widgetsnbextension
 
 extra:
   recipe-maintainers:
