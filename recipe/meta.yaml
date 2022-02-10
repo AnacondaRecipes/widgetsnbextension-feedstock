@@ -29,7 +29,7 @@ test:
   imports:
     - widgetsnbextension
   downstreams:
-    - ipywidgets
+    - ipywidgets  # [not (osx and arm64)]
   #requires:
     #- pip
   #commands:
