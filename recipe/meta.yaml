@@ -27,10 +27,13 @@ requirements:
 test:
   imports:
     - widgetsnbextension
-  requires:
-    - pip
-  commands:
-    - pip check
+  #requires:
+    #- pip
+  #commands:
+    # pip false positive checks notebook as a required dependency,
+    # notebook was deleted from install_requires on 2020/01/08,
+    # see https://github.com/jupyter-widgets/ipywidgets/commit/7ea681eb07e76796534ac1885d8e60ea9eb92b97
+    #- pip check
 
 about:
   home: http://ipython.org
