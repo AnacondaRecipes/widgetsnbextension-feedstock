@@ -23,6 +23,7 @@ requirements:
     - wheel
   run:
     - python
+    - notebook >=4.4.1
 
 test:
   imports:
