@@ -27,6 +27,8 @@ requirements:
 test:
   imports:
     - widgetsnbextension
+  downstreams:
+    - ipywidgets
   #requires:
     #- pip
   #commands:
