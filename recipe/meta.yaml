@@ -23,7 +23,9 @@ requirements:
     - wheel
   run:
     - python
-    - notebook >=4.4.1
+    # notebook was deleted from the upstream install_requires on 2020/01/08,
+    # see https://github.com/jupyter-widgets/ipywidgets/commit/7ea681eb07e76796534ac1885d8e60ea9eb92b97
+    #- notebook >=4.4.1
 
 test:
   imports:
