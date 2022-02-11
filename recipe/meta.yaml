@@ -11,32 +11,26 @@ source:
 
 build:
   number: 0
-  skip: True  # [py<37]
+  skip: True  # [py<36]
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
     - python
-    - jupyter-packaging >=0.10,<2
     - pip
     - setuptools
     - wheel
   run:
     - python
-    # notebook was deleted from the upstream install_requires on 2020/01/08,
-    # see https://github.com/jupyter-widgets/ipywidgets/commit/7ea681eb07e76796534ac1885d8e60ea9eb92b97
-    #- notebook >=4.4.1
+    - notebook >=4.4.1
 
 test:
   imports:
     - widgetsnbextension
-  #requires:
-    #- pip
-  #commands:
-    # pip false positive checks notebook as a required dependency,
-    # notebook was deleted from install_requires on 2020/01/08,
-    # see https://github.com/jupyter-widgets/ipywidgets/commit/7ea681eb07e76796534ac1885d8e60ea9eb92b97
-    #- pip check
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: http://ipython.org
