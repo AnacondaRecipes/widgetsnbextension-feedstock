@@ -44,6 +44,11 @@ about:
   dev_url: https://github.com/jupyter-widgets/ipywidgets/tree/master/python/widgetsnbextension
 
 extra:
+  anaconda-services:
+    comment: "Built for customer needed 3.6.0 without pre/post-link scripts"
+    recipe_maintainers:
+      - bkreider 
+    ref: https://anaconda.zendesk.com/agent/tickets/26726
   recipe-maintainers:
     - jasongrout
     - jakirkham
