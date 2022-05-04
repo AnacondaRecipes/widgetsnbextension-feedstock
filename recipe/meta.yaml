@@ -1,3 +1,4 @@
+{% set name = widgetsnbextension %}
 {% set version = "3.6.0" %}
 
 package:
