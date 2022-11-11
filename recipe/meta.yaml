@@ -11,18 +11,18 @@ source:
 
 build:
   number: 0
-  skip: True  # [py<36]
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  skip: True  # [py<37]
+  script: {{ PYTHON }} -m pip install . --no-deps -vvv
 
 requirements:
   host:
     - python
+    - jupyter-packaging
     - pip
     - setuptools
     - wheel
   run:
     - python
-    - notebook >=4.4.1
 
 test:
   imports:
@@ -39,7 +39,7 @@ about:
   license_family: BSD
   summary: Interactive Widgets for Jupyter
   description: |
-    Interactive HTML widgets for Jupyter notebooks.
+    Interactive Jupyter widgets for the classic Jupyter Notebook application. This package provides the necessary JavaScript controls in the Jupyter Notebook that communicate with the widget objects in the kernel.
   doc_url: https://pypi.python.org/pypi/widgetsnbextension
   dev_url: https://github.com/jupyter-widgets/ipywidgets/tree/master/python/widgetsnbextension
 
