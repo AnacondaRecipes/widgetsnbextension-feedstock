@@ -39,7 +39,8 @@ about:
   license_family: BSD
   summary: Interactive Widgets for Jupyter
   description: |
-    Interactive Jupyter widgets for the classic Jupyter Notebook application. This package provides the necessary JavaScript controls in the Jupyter Notebook that communicate with the widget objects in the kernel.
+    Interactive Jupyter widgets for the classic Jupyter Notebook application. 
+    This package provides the necessary JavaScript controls in the Jupyter Notebook that communicate with the widget objects in the kernel.
   doc_url: https://pypi.python.org/pypi/widgetsnbextension
   dev_url: https://github.com/jupyter-widgets/ipywidgets/tree/master/python/widgetsnbextension
 
