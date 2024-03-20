@@ -1,5 +1,5 @@
 {% set name = "widgetsnbextension" %}
-{% set version = "3.5.2" %}
+{% set version = "3.6.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/widgetsnbextension-{{ version }}.tar.gz
-  sha256: e0731a60ba540cd19bbbefe771a9076dcd2dde90713a8f87f27f53f2d1db7727
+  sha256: 46f4e3cb2d451bbd6141a13696d6ba17c9b5f50645dca9cfd26fe9644d5a00e1
 
 build:
   number: 0
-  skip: True  # [py<36]
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  skip: True  # [py<36 or s390x]
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
 
 requirements:
   host:
@@ -33,14 +33,14 @@ test:
     - pip check
 
 about:
-  home: http://ipython.org
+  home: https://ipython.org
   license: BSD-3-Clause
   license_file: LICENSE
   license_family: BSD
   summary: Interactive Widgets for Jupyter
   description: |
     Interactive HTML widgets for Jupyter notebooks.
-  doc_url: https://pypi.python.org/pypi/widgetsnbextension
+  doc_url: https://pypi.org/project/widgetsnbextension/
   dev_url: https://github.com/jupyter-widgets/ipywidgets/tree/master/python/widgetsnbextension
 
 extra:
