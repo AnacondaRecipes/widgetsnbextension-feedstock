@@ -1,18 +1,18 @@
 {% set name = "widgetsnbextension" %}
-{% set version = "4.0.13" %}
+{% set version = "4.0.14" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/widgetsnbextension-{{ version }}.tar.gz
-  sha256: ffcb67bc9febd10234a362795f643927f4e0c05d9342c727b65d2384f8feacb6
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: a3629b04e3edb893212df862038c7232f62973373869db5084aed739b437b5af
 
 build:
   number: 0
-  skip: True  # [py<37]
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+  skip: True  # [py<37]
 
 requirements:
   host:
@@ -33,7 +33,7 @@ test:
     - pip check
 
 about:
-  home: https://jupyter.org/
+  home: https://jupyter.org
   license: BSD-3-Clause
   license_file: LICENSE
   license_family: BSD
